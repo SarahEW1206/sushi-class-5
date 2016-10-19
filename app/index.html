@@ -6,6 +6,8 @@
 	<title>Brooklyn Eats: Matsu</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://code.angularjs.org/1.5.8/angular.js"></script>
+	<script src="app-module.js"></script>
+	<script src="recipes/recipe-list.component.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 
@@ -66,13 +68,10 @@
 			<h2>A Guide to Fine North Brooklyn Dining</h2>
 		</header>
 
-		<article ng-app="recipeApp" ng-controller="RecipeListController">
-			<ul>
-				<li ng-repeat="recipe in recipes">
-					<span>{{ recipe.title }}</span>
-					<p>{{ recipe.description }}</p>
-				</li>
-			</ul>
+		<article>
+			<div ng-app="recipeApp">
+				<recipe-list></recipe-list>
+			</div>
 		</article>
 	</div>
 
