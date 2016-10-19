@@ -65,8 +65,14 @@
 			<h1>Brooklyn Eats</h1>
 			<h2>A Guide to Fine North Brooklyn Dining</h2>
 		</header>
-		<article>
 
+		<article ng-app="recipeApp" ng-controller="RecipeListController">
+			<ul>
+				<li ng-repeat="recipe in recipes">
+					<span>{{ recipe.title }}</span>
+					<p>{{ recipe.description }}</p>
+				</li>
+			</ul>
 		</article>
 	</div>
 
